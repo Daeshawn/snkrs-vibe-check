@@ -1,0 +1,25 @@
+{
+  "name": "snkrs-vibe-check",
+  "version": "1.0.0",
+  "description": "Use image recognition provided from gpc and aws to analyze images and find snkrs that match the vibe of the images",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daeshawn/snkrs-vibe-check.git"
+  },
+  "author": "Daevinci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daeshawn/snkrs-vibe-check/issues"
+  },
+  "homepage": "https://github.com/Daeshawn/snkrs-vibe-check#readme",
+  "dependencies": {
+    "help": "^3.0.2"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.852.0"
+  }
+}
