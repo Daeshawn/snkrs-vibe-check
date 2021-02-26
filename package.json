@@ -4,7 +4,11 @@
   "description": "Use image recognition provided from gpc and aws to analyze images and find snkrs that match the vibe of the images",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare-zip": "npm-pack-zip",
+    "prepare-zip-with-deps": "lambda-zipper build -f ./ -o ./build/snkrs-vibe-check.zip",
+    "upload": "./scripts/upload.sh",
+    "s3me": "npm run prepare-zip-with-deps && npm run upload"
   },
   "repository": {
     "type": "git",
@@ -17,9 +21,14 @@
   },
   "homepage": "https://github.com/Daeshawn/snkrs-vibe-check#readme",
   "dependencies": {
-    "help": "^3.0.2"
+    "@google-cloud/vision": "^2.3.1",
+    "help": "^3.0.2",
+    "request": "^2.88.2",
+    "rgb-hex": "^3.0.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.852.0"
+    "aws-sdk": "^2.852.0",
+    "lambda-zipper": "^0.6.1",
+    "npm-pack-zip": "^1.2.7"
   }
 }
